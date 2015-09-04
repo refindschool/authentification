@@ -9,23 +9,6 @@ Router.route('index',{
     this.next();
   }
 });
-Router.route('signup', {
-  path: '/signup',
-  template: 'signup',
-  onBeforeAction: function(){
-    Session.set('currentRoute', 'signup');
-    this.next();
-  }
-});
-
-Router.route('login', {
-  path: '/login',
-  template: 'login',
-  onBeforeAction: function(){
-    Session.set('currentRoute', 'login');
-    this.next();
-  }
-});
 
 Router.route('recover-password', {
   path: '/recover-password',
