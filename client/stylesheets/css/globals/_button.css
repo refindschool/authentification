@@ -1,0 +1,61 @@
+.btn-social-login {
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.btn-social-login i {
+  display: inline-block;
+  font-size: 1.25em;
+  margin-right: 5px;
+}
+
+.btn-social-login:hover {
+  color: #fff;
+}
+
+.btn-facebook {
+  background: #3B5998;
+}
+
+.btn-facebook:hover {
+  background: #344e86;
+}
+
+.btn-github {
+  background: #333333;
+}
+
+.btn-github:hover {
+  background: #262626;
+}
+
+.btn-google {
+  background: #DD4B39;
+}
+
+.btn-google:hover {
+  background: #d73925;
+}
+
+.btn-twitter {
+  background: #55ACEE;
+}
+
+.btn-twitter:hover {
+  background: #3ea1ec;
+}
+
+.btn-list {
+  list-style: none;
+  padding: 0;
+}
+
+.btn-list li {
+  margin-bottom: 10px;
+}
+
+.btn-list li:last-child {
+  margin-bottom: 0px;
+}
