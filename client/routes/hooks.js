@@ -51,7 +51,7 @@ Router.onBeforeAction(checkUserLoggedIn, {
 
 Router.onBeforeAction(userAuthenticated, {
   only: [
-    'index'
+    'index',
     'signup',
     'login',
     'recover-password',
