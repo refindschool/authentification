@@ -13,7 +13,6 @@ audit-argument-checks
 iron:router
 themeteorchef:jquery-validation
 twbs:bootstrap
-browser-policy
 meteorhacks:npm
 
 
