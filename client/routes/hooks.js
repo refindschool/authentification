@@ -10,12 +10,12 @@
 /*
 * Hook: Check if a User is Logged In
 * If a user is not logged in and attempts to go to an authenticated route,
-* re-route them to the login screen.
+* re-route them to the index screen.
 */
 
 checkUserLoggedIn = function(){
   if( !Meteor.loggingIn() && !Meteor.user() ) {
-    Router.go('/login');
+    Router.go('/');
   } else {
     this.next();
   }
@@ -24,12 +24,12 @@ checkUserLoggedIn = function(){
 /*
 * Hook: Check if a User Exists
 * If a user is logged in and attempts to go to a public route, re-route
-* them to the index path.
+* them to the dashboard path.
 */
 
 userAuthenticated = function(){
   if( !Meteor.loggingIn() && Meteor.user() ){
-    Router.go('/');
+    Router.go('/dashboard');
   } else {
     this.next();
   }
@@ -41,6 +41,7 @@ userAuthenticated = function(){
 
 Router.onBeforeAction(checkUserLoggedIn, {
   except: [
+    'index',
     'signup',
     'login',
     'recover-password',
@@ -50,6 +51,7 @@ Router.onBeforeAction(checkUserLoggedIn, {
 
 Router.onBeforeAction(userAuthenticated, {
   only: [
+    'index'
     'signup',
     'login',
     'recover-password',
