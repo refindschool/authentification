@@ -20,3 +20,10 @@ meteorhacks:npm
 npm-container
 themeteorchef:bert
 meteorhacks:ssr
+accounts-facebook
+accounts-github
+accounts-google
+accounts-twitter
+service-configuration
+http
+email
