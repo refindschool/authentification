@@ -2,6 +2,7 @@
   Controller: Index
   Template: /client/views/public/index.html
  */
+ // Events
 Template.index.events({
   'click .btn-facebook': function() {
     return Meteor.loginWithFacebook({
