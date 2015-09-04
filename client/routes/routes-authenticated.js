@@ -5,7 +5,7 @@
 
 Router.route('dashboard', {
   path: '/dashboard',
-  template: 'index',
+  template: 'dashboard',
   onBeforeAction: function(){
     // Code to run before route goes here.
     Session.set("currentRoute", "dashboard");
