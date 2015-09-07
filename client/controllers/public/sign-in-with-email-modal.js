@@ -35,14 +35,29 @@
     // Take the correct path according to what the user clicked and
     //  our session variable is equal to.
     if (createOrSignIn === "create") {
+         return Meteor.call('validateEmailAddress', user.email, function(error, response) {
+          if (error) {
+            return alert(error.reason);
+          } else {
+            if (response.error) {
+              return alert(response.error);
+            } else {
       return Accounts.createUser(user, function(error) {
+// Before we do the insert, we call to the server to validate our email
+// address. This isn't *required*, but it's a good feature to have. This
+// allows us to ensure that users are signing up with legitimate email
+//addresses and not addresses that will bounce.
         if (error) {
+         //  If we get an error, let our user know.
           return alert(error.reason);
         } else {
           // If all works as expected, we need to hide our modal backdrop (lol, Bootstrap).
           return $('.modal-backdrop').hide();
         }
       });
+    }
+    }
+  });
     } else {
       return Meteor.loginWithPassword(user.email, user.password, function(error) {
         if (error) {
