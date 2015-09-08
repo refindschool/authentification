@@ -27,4 +27,3 @@ service-configuration
 http
 email
 fortawesome:fontawesome
-meteorhacks:async
