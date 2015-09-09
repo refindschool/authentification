@@ -32,6 +32,7 @@ Template.index.events({
     });
   },
   'click .btn-twitter': function() {
+     //FIX: OAuth is failing to validate for this fella.
     return Meteor.loginWithTwitter(function(error) {
       if (error) {
         return console.log(error.reason);

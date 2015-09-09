@@ -18,6 +18,11 @@ UI.registerHelper('currentRoute', function(route) {
   }
 });
 
+// Current User Email
+// Return the current user's email address. This method helps us to obtain the
+// user's email regardless of whether they're using an OAuth login or the
+// accounts-password login (Meteor doesn't offer a native solution for this).
+
 UI.registerHelper('userIdentity', function(userId) {
   var getService, getUser, services;
   getUser = Meteor.users.findOne({
