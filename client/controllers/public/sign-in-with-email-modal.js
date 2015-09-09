@@ -1,5 +1,5 @@
  // Rendered
- Template.signInWithEmailModal.onRendered = function() {
+ Template.signInWithEmailModal.rendered = function() {
   return $('#sign-in-with-email').validate({
     rules: {
       emailAddress: {
