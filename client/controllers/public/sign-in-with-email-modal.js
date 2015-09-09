@@ -1,5 +1,5 @@
  // Rendered
- Template.signInWithEmailModal.rendered = function() {
+ Template.signInWithEmailModal.onRendered = function() {
   return $('#sign-in-with-email').validate({
     rules: {
       emailAddress: {
@@ -16,7 +16,7 @@
         email: "Is that a real email? What a trickster!"
       },
       password: {
-        required: "Pop in a passwordarooni for me there, will ya?"
+        required: "Gonna need an password, there, friend!?"
       }
     },
     submitHandler: function() {
@@ -58,7 +58,10 @@
     }
     }
   });
+
+         // end of account creation process
     } else {
+      // begining login process
       return Meteor.loginWithPassword(user.email, user.password, function(error) {
         if (error) {
           return alert(error.reason);
