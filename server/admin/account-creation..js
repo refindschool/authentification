@@ -79,7 +79,7 @@ Meteor.methods({
     // Compile and render our email template using meteorhacks:ssr.
     SSR.compileTemplate('welcomeEmail', Assets.getText('email/welcome-email.html'));
     emailTemplate = SSR.render('welcomeEmail', {
-      email: userData.email,
+
       name: userData.name !== "" ? userData.name : null,
       url: "http://localhost:3000"
     });
